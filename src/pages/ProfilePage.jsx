@@ -13,7 +13,7 @@ const ProfilePage = () => {
     const fetchProfile = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/users/profile', {
+        const response = await fetch('https://e-learningbackend-s24h.onrender.com/api/users/profile', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const ProfilePage = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/users/profile', {
+      const response = await fetch('https://e-learningbackend-s24h.onrender.com/api/users/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -30,7 +30,7 @@ const EditCoursePage = () => {
     const fetchCourse = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+        const response = await fetch(`https://e-learningbackend-s24h.onrender.com/api/courses/${courseId}`, {
           headers: {
             Authorization: `Bearer ${user?.token}`,
           },
@@ -79,7 +79,7 @@ const EditCoursePage = () => {
         formData.append('multimedia', newFiles[i]);
       }
 
-      const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+      const response = await fetch(`https://e-learningbackend-s24h.onrender.com/api/courses/${courseId}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${user.token}`,

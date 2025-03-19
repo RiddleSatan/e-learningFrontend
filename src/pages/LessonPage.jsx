@@ -13,7 +13,7 @@ const LessonPage = () => {
   useEffect(() => {
     const fetchLesson = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/lessons/${lessonId}`);
+        const response = await fetch(`https://e-learningbackend-s24h.onrender.com/api/lessons/${lessonId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch lesson details');
         }

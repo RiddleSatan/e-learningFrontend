@@ -12,7 +12,7 @@ const HomePage = () => {
     const fetchFeaturedCourses = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/courses/featured');
+        const response = await fetch('https://e-learningbackend-s24h.onrender.com/api/courses/featured');
         if (!response.ok) {
           throw new Error('Failed to fetch featured courses');
         }

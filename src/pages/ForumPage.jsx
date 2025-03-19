@@ -12,7 +12,7 @@ const ForumPage = () => {
 
   useEffect(() => {
     // Connect to backend Socket.io server, forcing WebSocket transport for stability
-    socketRef.current = io("http://localhost:5000", { transports: ['websocket'] });
+    socketRef.current = io("https://e-learningbackend-s24h.onrender.com", { transports: ['websocket'] });
 
     socketRef.current.on('connect', () => {
       console.log('Socket connected with id:', socketRef.current.id);

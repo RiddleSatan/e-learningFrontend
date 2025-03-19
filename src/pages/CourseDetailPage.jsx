@@ -12,7 +12,7 @@ const CourseDetailPage = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/courses/${courseId}`);
+        const response = await fetch(`https://e-learningbackend-s24h.onrender.com/api/courses/${courseId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch course details');
         }
@@ -62,7 +62,7 @@ const CourseDetailPage = () => {
           {course.multimedia && course.multimedia.length > 0 ? (
             <ul className="space-y-2">
               {course.multimedia.map((fileUrl, index) => {
-                const absoluteUrl = `http://localhost:5000${fileUrl}`;
+                const absoluteUrl = `https://e-learningbackend-s24h.onrender.com${fileUrl}`;
                 return (
                   <li key={index}>
                     <a
